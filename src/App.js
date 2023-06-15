@@ -13,9 +13,9 @@ import Game from './components/Game';
 import GameOver from './components/GameOver';
 
 const stages = [
-  { id: 0, name: "start" },
-  { id: 1, name: "game" },
-  { id: 2, name: "end" },
+  { id: 1, name: "start" },
+  { id: 2, name: "game" },
+  { id: 3, name: "end" },
 ]
 
 const guessQty = 3
@@ -29,7 +29,7 @@ function App() {
   const [pickedCategory, setPickedCategory] = useState("");
   const [letters, setLetters] = useState([]);
 
-  const [guessedLetters, setGuessedLetters] = useState([])
+  const [guessedLetters, setGuessedLetters] = useState([""])
   const [wrongLetters, setWrongLetters] = useState([])
   const [guesses, setGuesses] = useState(guessQty)
   const [score, setScore] = useState(0)
@@ -50,6 +50,8 @@ function App() {
 
   // starts the game
   const startGame = useCallback(() => {
+    // clear all letters 
+    clearLetterStates()
     // pick word and pick category
     const {word, category } = pickWordAndCategory();
 
@@ -112,7 +114,7 @@ function App() {
 
       // restart game with new word
       startGame()
-      clearLetterStates()
+  
     }
   }, [guessedLetters, letters, startGame])
   
@@ -120,8 +122,9 @@ function App() {
 
   // restarts the game
   const retry = () => {
-    setScore(0)
     setGuesses(guessQty)
+    // reset score
+    setScore(0)
     setGameStage(stages[0].name);
   }
 
