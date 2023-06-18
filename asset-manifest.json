@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/series-game/static/css/main.a9cf5f26.css",
+    "main.css": "/series-game/static/css/main.c1d4f4fd.css",
     "main.js": "/series-game/static/js/main.62c75b3d.js",
     "static/js/787.c74d0e55.chunk.js": "/series-game/static/js/787.c74d0e55.chunk.js",
     "index.html": "/series-game/index.html",
-    "main.a9cf5f26.css.map": "/series-game/static/css/main.a9cf5f26.css.map",
+    "main.c1d4f4fd.css.map": "/series-game/static/css/main.c1d4f4fd.css.map",
     "main.62c75b3d.js.map": "/series-game/static/js/main.62c75b3d.js.map",
     "787.c74d0e55.chunk.js.map": "/series-game/static/js/787.c74d0e55.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9cf5f26.css",
+    "static/css/main.c1d4f4fd.css",
     "static/js/main.62c75b3d.js"
   ]
 }
